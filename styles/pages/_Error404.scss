@@ -1,0 +1,330 @@
+/////////////////////////  Page Erreur 404 /////////////////////////
+
+#error404 {
+  height: 100vh;
+  overflow: hidden;
+  background-color: hsl(0, 3%, 7%);
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @extend %flex-center;
+  flex-direction: column;
+  h1 {
+    font-size: calc(2.5vmin + 3.5rem);
+    position: relative;
+    font-family: $font, serif;
+    font-style: italic;
+    color: hsl(42, 20%, 87%);
+    overflow: default;
+    animation: H1-glitch 4.5s infinite, clignote 2s linear infinite;
+    &::before {
+      content: "Error 404";
+      position: absolute;
+      font-family: $font, serif;
+      font-style: italic;
+      animation: H1-glitch-before 4.5s infinite, clignote-2 0.2s linear infinite;
+      color: hsl(0, 82%, 69%);
+    }
+    &::after {
+      position: absolute;
+      color: hsl(169, 85%, 68%);
+      top: 0;
+      left: 0;
+      font-family: $font, serif;
+      font-style: italic;
+      opacity: 0;
+      animation: H1-glitch-after 4.5s infinite, clignote-1 0.2s linear infinite;
+    }
+  }
+  h2 {
+    font-size: calc(1.5vmin + 2rem);
+    position: relative;
+    color: hsl(43, 36%, 86%);
+    margin-bottom: 5%;
+    font-family: $font, serif;
+    font-style: italic;
+    animation: clignote-3 1s linear infinite;
+    &::before {
+      content: "⚠️ Page not found";
+      position: absolute;
+    }
+    &::after {
+      content: "⚠️ Page not found";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  *::selection {
+    background-color: transparent;
+  }
+}
+
+/////////////////////////  Animations /////////////////////////
+
+@keyframes H1-glitch {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -1.1deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.4deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes H1-glitch-before {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes H1-glitch-after {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes clignote {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    transform: scaleY(1.7);
+  }
+  43% {
+    opacity: 1;
+    transform: scaleX(1.5);
+  }
+}
+
+@keyframes clignote-1 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+    left: -6px;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+    left: 2px;
+  }
+}
+
+@keyframes clignote-2 {
+  0%,
+  20%,
+  40%,
+  60%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.5;
+    left: 6px;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+    left: -2px;
+  }
+}
+
+@keyframes clignote-3 {
+  0%,
+  3%,
+  5%,
+  42%,
+  44%,
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  4.3% {
+    opacity: 1;
+    transform: scaleY(4);
+  }
+  43% {
+    opacity: 1;
+    transform: scaleX(10) rotate(60deg);
+  }
+}
+
+/////////////////////////  Fonts /////////////////////////
+
+@font-face {
+  font-family: "404Font";
+  src: url("../../public/assets/fonts/404font.woff2") format("woff2"),
+    url("../../public/assets/fonts/404font.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
