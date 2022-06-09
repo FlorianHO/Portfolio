@@ -75,7 +75,7 @@ export default function Home() {
             <span>Salut !</span>
           </h2>
           <h1>
-            <span>Je m&#x27;appelle florian</span>
+            <span>Je m&#x27;appelle Florian</span>
           </h1>
           <p>
             Salut! <span ref={description}></span>
