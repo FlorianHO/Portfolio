@@ -83,7 +83,6 @@ const Navigation = () => {
               </a>
             </Link>
           </li>
-
           <li>
             <Link href="/portfolio">
               <a
@@ -95,7 +94,6 @@ const Navigation = () => {
               </a>
             </Link>
           </li>
-
           <li>
             <Link href="/apis">
               <a className={router.pathname === "/apis" ? "link-active" : ""}>
@@ -103,15 +101,6 @@ const Navigation = () => {
               </a>
             </Link>
           </li>
-
-          <li>
-            <Link href="/">
-              <a
-                className={router.pathname === "/apis" ? "link-active" : ""}
-              ></a>
-            </Link>
-          </li>
-
           <li>
             <Link href="/contact">
               <a
