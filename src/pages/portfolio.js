@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navigation from "../components/french/Navigation";
+import Navigation from "../components/Navigation";
 
 const Portfolio = () => {
   return (

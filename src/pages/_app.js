@@ -10,16 +10,17 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     setLoading(false);
     document.getElementById("__next").classList.add("fade-in");
-    let test = document.title;
-    const DocumentName = () => {
-      if (document.visibilityState === "visible") {
-        document.title = test;
-      } else {
-        document.title = "Come back 😥";
-      }
-    };
 
-    document.addEventListener("visibilitychange", DocumentName);
+    window.addEventListener("load", () => {
+      let documentName = document.title;
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+          document.title = documentName;
+        } else {
+          document.title = "Come back 😥";
+        }
+      });
+    });
   }, []);
   return (
     <>

@@ -3,8 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import gsap from "gsap";
 import Typed from "typed.js";
-import Navigation from "../components/french/Navigation";
-import Footer from "../components/french/Footer";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import fr from "../content/Fr.jsx";
+import en from "../content/En.jsx";
 
 export default function Home() {
   const description = useRef();
@@ -17,7 +19,11 @@ export default function Home() {
 
   useEffect(() => {
     const typed = new Typed(description.current, {
-      strings: ["Je suis étudiant en", "Je cherche", "Et "],
+      strings: [
+        "Je suis étudiant en 2ème année de prépa intégrée informatique.",
+        "Je cherche",
+        "Et ",
+      ],
       startDelay: 150,
       typeSpeed: 150,
       backDelay: 300,

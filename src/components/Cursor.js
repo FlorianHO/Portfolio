@@ -30,7 +30,7 @@ const Cursor = () => {
     document.addEventListener("click", CursorClick);
 
     let HoverElement = document.querySelectorAll(
-      "a, button, .color-button, input"
+      "a, button, .color-button, input, option, select"
     );
     HoverElement.forEach((element) => {
       element.addEventListener("mouseenter", CursorHover);

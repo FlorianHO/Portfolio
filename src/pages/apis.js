@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Navigation from "../components/french/Navigation";
-import Meteo from "../components/french/Météo";
-import Footer from "../components/french/Footer";
+import Navigation from "../components/Navigation";
+import Meteo from "../components/Météo";
+import Footer from "../components/Footer";
 
 const Api = () => {
   <Head>
