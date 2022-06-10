@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import Typed from "typed.js";
 import Navigation from "../components/Navigation";
@@ -61,7 +62,11 @@ export default function Home() {
     });
   }, []);
   return (
-    <>
+    <motion.div
+    initial={{ scaleX: 0 }}
+    animate={{ scaleX: 1 }}
+    exit={{ scaleX: 0 }}
+    transition={{ duration: 0.5 }}>
       <Head>
         <meta name="description" content="D" />
         <title>Site Portfolio · Houdu Florian 😎</title>
@@ -79,7 +84,13 @@ export default function Home() {
           <a href="#formation">Accèder aux formations</a>
         </li>
       </ul>
-      <header className="home-header">
+      <header className="home-header"
+      layoutId="IndexHeader"
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      exit={{ scaleX: 0 }}
+      transition={{ duration: 0.5 }}
+      >
         <Navigation />
         <div className="container-text-home">
           <h2>
@@ -310,6 +321,6 @@ export default function Home() {
         </section>
       </main>
       <Footer />
-    </>
+    </motion.div>
   );
 }

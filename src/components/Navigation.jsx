@@ -134,15 +134,23 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
-            <select
-              name="language"
-              id="language"
-              onChange={changeLanguage}
-              defaultValue={locale}
-            >
-              <option value="fr">FR</option>
-              <option value="en">EN</option>
-            </select>
+            <div className="language-select">
+              <select
+                name="language"
+                id="language"
+                onChange={changeLanguage}
+                defaultValue={locale}
+              >
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+              </select>
+              <Image
+              src="/assets/images/angle-down-solid.svg"
+              alt="Logo de Linkedin"
+              width={25}
+              height={25}
+            />
+            </div>
           </li>
         </ul>
         <div className="nav-social-links">

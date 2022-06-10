@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "emailjs": "^4.0.0",
+    "framer-motion": "^6.3.11",
     "gsap": "^3.10.4",
     "next": "12.1.6",
     "nodemailer": "^6.7.5",

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import axios from "axios";
 
 const Meteo = () => {
@@ -13,7 +14,7 @@ const Meteo = () => {
     const result = await axios(Url);
     setData(result.data);
     setIsFetched(true);
-    console.log(result);
+    
   };
 
   const handleSubmit = (e) => {
@@ -26,6 +27,7 @@ const Meteo = () => {
     fetchData();
   }, []);
   if (isFetched) {
+    console.log(data);
     return (
       <>
         <section id="meteo">
@@ -49,9 +51,15 @@ const Meteo = () => {
               <div className="api-wind">
                 <h3>{data.wind.speed} km/h</h3>
               </div>
+              <div className="temp-min">
+                <h3>{data.main.temp_min}°C</h3>
+              </div>
+              <div className="temp-max">
+                <h3>{data.main.temp_max}°C</h3>
+              </div>
             </div>
             <div className="container-right-meteo">
-              <p>Temp. ressentie : </p>
+              <p>Temp. ressentie : {data.main.feels_like}°C<br/> {data.weather[0].description} </p>
               <div className="api-temp">
                 <h3>{data.main.temp}°C</h3>
               </div>

@@ -1,11 +1,7 @@
 /////////////////////////  Paramètre généraux  /////////////////////////
 
-// #__next {
-//   opacity: 0;
-// }
-
 .fade-in {
-  animation: fade-out 3s ease-out;
+  animation: fade-out 4s ease-out;
   opacity: 1;
 }
 
@@ -266,6 +262,13 @@ header {
         &:not(.link-active):active::before {
           background: hsl(177, 39%, 50%);
           transition: all 250ms ease-in-out;
+        }
+      }
+      .language-select {
+        @extend %flex-center;
+        img {
+          filter: invert(50%) sepia(90%) saturate(600%) hue-rotate(0deg)
+            brightness(120%) contrast(100%);
         }
       }
     }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import { AnimateSharedLayout } from "framer-motion"
 import Loader from "../components/Loader.jsx";
 import Cursor from "../components/Cursor.jsx";
 import "../../styles/index.scss";
@@ -27,7 +28,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
+          content="width=device-width, initial-scale=1"
         />
         <meta name="robots" content="INDEX,FOLLOW" />
         <meta name="theme-color" content="#181920" />
@@ -43,10 +44,10 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       {!loading ? (
-        <>
+        <AnimateSharedLayout>
           <Component {...pageProps} />
           <Cursor />
-        </>
+        </AnimateSharedLayout>
       ) : (
         <>
           <Head>
