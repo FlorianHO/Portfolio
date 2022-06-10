@@ -1,26 +1,41 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Head from "next/head";
-import { AnimateSharedLayout } from "framer-motion"
+import { LayoutGroup } from "framer-motion"
 import Loader from "../components/Loader.jsx";
 import Cursor from "../components/Cursor.jsx";
 import "../../styles/index.scss";
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
+  // setLoading(true);
+ 
   useEffect(() => {
     setLoading(false);
     document.getElementById("__next").classList.add("fade-in");
+    let lastUrl = location.href; 
+    new MutationObserver(() => {
+      const url = location.href;
+      if (url !== lastUrl) {
+        lastUrl = url;
+        ChangedPage();
+      }
+    }).observe(document, {subtree: true, childList: true});
 
-    window.addEventListener("load", () => {
-      let documentName = document.title;
+    const ChangedPage = () => {
+      let PageName = document.title;
+      console.log(PageName)
       document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
-          document.title = documentName;
+          document.title = PageName;
         } else {
           document.title = "Come back 😥";
         }
       });
+    }
+    
+    window.addEventListener("load", () => {
+    
     });
   }, []);
   return (
@@ -44,10 +59,10 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       {!loading ? (
-        <AnimateSharedLayout>
+        <LayoutGroup>
           <Component {...pageProps} />
           <Cursor />
-        </AnimateSharedLayout>
+        </LayoutGroup>
       ) : (
         <>
           <Head>

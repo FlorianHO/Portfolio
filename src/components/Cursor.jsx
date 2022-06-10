@@ -13,6 +13,7 @@ const Cursor = () => {
 
     const CursorClick = () => {
       cursorRef.current.classList.add("expand");
+  
       setTimeout(() => {
         cursorRef.current.classList.remove("expand");
       }, 650);
@@ -30,7 +31,7 @@ const Cursor = () => {
     document.addEventListener("click", CursorClick);
 
     let HoverElement = document.querySelectorAll(
-      "a, button, .color-button, input, option, select"
+      "a, button, .color-button, input, option, select, .hamburger-logo"
     );
     HoverElement.forEach((element) => {
       element.addEventListener("mouseenter", CursorHover);

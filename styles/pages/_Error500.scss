@@ -1,0 +1,9 @@
+#error500 {
+  height: 100vh;
+  overflow: hidden;
+  background-color: hsl(0, 3%, 7%);
+  pointer-events: none;
+  user-select: none;
+  @extend %flex-center;
+  flex-direction: column;
+}

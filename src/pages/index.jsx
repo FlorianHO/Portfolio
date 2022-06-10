@@ -66,7 +66,7 @@ export default function Home() {
     initial={{ scaleX: 0 }}
     animate={{ scaleX: 1 }}
     exit={{ scaleX: 0 }}
-    transition={{ duration: 0.5 }}>
+    transition={{ duration: 0.3 }}>
       <Head>
         <meta name="description" content="D" />
         <title>Site Portfolio · Houdu Florian 😎</title>
@@ -75,22 +75,16 @@ export default function Home() {
       </Head>
       <ul className="access-nav">
         <li>
-          <a href="#skills">Accéder aux compétences</a>
+          <a href="#skills">{language.indexPresentation[5]}</a>
         </li>
         <li>
-          <a href="#experience">Accèder à l&#x27;expérience</a>
+          <a href="#experience">{language.indexPresentation[6]}</a>
         </li>
         <li>
-          <a href="#formation">Accèder aux formations</a>
+          <a href="#formation">{language.indexPresentation[7]}</a>
         </li>
       </ul>
-      <header className="home-header"
-      layoutId="IndexHeader"
-      initial={{ scaleX: 0 }}
-      animate={{ scaleX: 1 }}
-      exit={{ scaleX: 0 }}
-      transition={{ duration: 0.5 }}
-      >
+      <header className="home-header">
         <Navigation />
         <div className="container-text-home">
           <h2>
@@ -100,7 +94,7 @@ export default function Home() {
             <span>{language.indexPresentation[1]}</span>
           </h1>
           <p>
-            Salut! <span ref={description}></span>
+          {language.indexPresentation[0]} <span ref={description}></span>
           </p>
           <a
             href="/assets/files/CV - Houdu Florian.pdf"
@@ -175,7 +169,7 @@ export default function Home() {
       <main id="home-content">
         <section id="resume">
           <div id="skills">
-            <h3>Compétences</h3>
+            <h3>{language.indexPresentation[2]}</h3>
             <div className="container-card-skills" ref={languagesLogo}>
               <div className="skill">
                 <Image
@@ -261,7 +255,7 @@ export default function Home() {
             </div>
           </div>
           <div id="experience">
-            <h3>Expérience professionnelle</h3>
+            <h3>{language.indexPresentation[3]}</h3>
             <div className="container-experience-timeline">
               <div className="experience-timeline">
                 <div className="exp-1">
@@ -316,7 +310,7 @@ export default function Home() {
             </div>
           </div>
           <div id="formation">
-            <h3>Formations</h3>
+            <h3>{language.indexPresentation[4]}</h3>
           </div>
         </section>
       </main>

@@ -5,9 +5,6 @@
   overflow: hidden;
   background-color: hsl(0, 3%, 7%);
   pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   @extend %flex-center;
   flex-direction: column;

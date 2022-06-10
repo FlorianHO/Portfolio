@@ -4,13 +4,13 @@ import Meteo from "../components/Météo";
 import Footer from "../components/Footer";
 
 const Api = () => {
-  <Head>
-    <title>Api · Houdu Florian 😎</title>
-    <meta name="description" content="D" />
-    <link rel="icon" href="/favicon.ico" />
-  </Head>;
   return (
     <>
+      <Head>
+        <title>Api · Houdu Florian 😎</title>
+        <meta name="description" content="D" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <header className="api-header">
         <Navigation />
         <h1>Météo actuelle</h1>

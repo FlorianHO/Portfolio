@@ -7,7 +7,7 @@ const Error404 = () => {
         <title>Error 404 (Page Not Found Error)⚠️</title>
         <meta
           name="description"
-          content="Sorry, the page could not be found."
+          content="Sorry, the page could not be found · Error 404"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

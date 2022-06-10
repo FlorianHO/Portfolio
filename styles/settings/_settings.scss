@@ -194,6 +194,7 @@ header {
         animation: ColorPulse 1.8s ease-out infinite;
       }
     }
+
     ul {
       @extend %flex-center;
       list-style: none;
@@ -267,8 +268,8 @@ header {
       .language-select {
         @extend %flex-center;
         img {
-          filter: invert(50%) sepia(90%) saturate(600%) hue-rotate(0deg)
-            brightness(120%) contrast(100%);
+          filter: invert(50%) sepia(90%) saturate(900%) hue-rotate(0deg)
+            brightness(120%) contrast(60%);
         }
       }
     }
@@ -500,7 +501,58 @@ footer {
 /////////////////////////  Responsive /////////////////////////
 
 @media screen and (max-width: 1200px) {
+  .hamburger-logo {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 3px solid $light-color-text;
+    transition: all 0.6s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .burger-line {
+      position: absolute;
+      width: 15px;
+      height: 2px;
+      background-color: $light-color-text;
+      box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+      transition: all 0.6s ease-out;
+    }
+    .burger-line:nth-child(1) {
+      transform: translateY(-5px);
+    }
+    .burger-line:nth-child(3) {
+      transform: translateY(5px);
+    }
+    &.active {
+      z-index: 3;
+      .burger-line:nth-child(2) {
+        display: none;
+      }
+      .burger-line:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      .burger-line:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
   header nav ul {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: $background-dark;
+    top: 0;
+    right: -1000px;
+    bottom: 0;
+    z-index: 2;
+    width: 50vw;
+    height: 100vh;
+  }
+
+  header nav ul.opennav {
+    right: 0px;
   }
 }

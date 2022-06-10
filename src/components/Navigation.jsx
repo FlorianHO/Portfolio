@@ -11,6 +11,8 @@ const Navigation = () => {
   let lastScrollTop = 0;
   let ColorSite = useRef();
   let Links = useRef();
+  let HamburgerLogo = useRef();
+  let NavList = useRef();
   let NavLinks = gsap.utils.selector(Links);
 
   const { locale } = router;
@@ -44,6 +46,11 @@ const Navigation = () => {
     }
     lastScrollTop = scrollTop;
   };
+
+  const ActivatedHamburger = () => {
+    HamburgerLogo.current.classList.toggle("active");
+    NavList.current.classList.toggle("opennav");
+  }
 
   let ChangeColor = () => {
     document.body.classList.toggle("light");
@@ -85,7 +92,12 @@ const Navigation = () => {
         <div className="color-button" ref={ColorSite}>
           <i className="btn-moon"></i>
         </div>
-        <ul>
+        <div className="hamburger-logo" onClick={ActivatedHamburger} ref={HamburgerLogo}> 
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+        </div>
+        <ul ref={NavList}>
           <li>
             <Link href="/">
               <a className={router.pathname === "/" ? "link-active" : ""}>
