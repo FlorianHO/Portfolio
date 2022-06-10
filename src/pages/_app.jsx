@@ -7,9 +7,7 @@ import "../../styles/index.scss";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
-
-  // setLoading(true);
- 
+  
   useEffect(() => {
     setLoading(false);
     document.getElementById("__next").classList.add("fade-in");
@@ -23,6 +21,10 @@ function MyApp({ Component, pageProps }) {
     }).observe(document, {subtree: true, childList: true});
 
     const ChangedPage = () => {
+   
+    }
+    
+    window.addEventListener("load", () => {
       let PageName = document.title;
       console.log(PageName)
       document.addEventListener("visibilitychange", () => {
@@ -32,10 +34,6 @@ function MyApp({ Component, pageProps }) {
           document.title = "Come back 😥";
         }
       });
-    }
-    
-    window.addEventListener("load", () => {
-    
     });
   }, []);
   return (

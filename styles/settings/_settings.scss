@@ -503,8 +503,8 @@ footer {
 @media screen and (max-width: 1200px) {
   .hamburger-logo {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border: 3px solid $light-color-text;
     transition: all 0.6s ease-out;
     display: flex;
@@ -513,17 +513,17 @@ footer {
     flex-direction: column;
     .burger-line {
       position: absolute;
-      width: 15px;
-      height: 2px;
+      width: 30px;
+      height: 4px;
       background-color: $light-color-text;
       box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
       transition: all 0.6s ease-out;
     }
     .burger-line:nth-child(1) {
-      transform: translateY(-5px);
+      transform: translateY(-11px);
     }
     .burger-line:nth-child(3) {
-      transform: translateY(5px);
+      transform: translateY(11px);
     }
     &.active {
       z-index: 3;

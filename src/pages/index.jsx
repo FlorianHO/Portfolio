@@ -69,7 +69,7 @@ export default function Home() {
     transition={{ duration: 0.3 }}>
       <Head>
         <meta name="description" content="D" />
-        <title>Site Portfolio · Houdu Florian 😎</title>
+        <title>{language.indexPresentation[8]} · Houdu Florian 😎</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://florianhoudu.fr/" />
       </Head>
