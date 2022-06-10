@@ -24,9 +24,8 @@ function MyApp({ Component, pageProps }) {
    
     }
     
-    window.addEventListener("load", () => {
+    window.addEventListener("popstate", () => {
       let PageName = document.title;
-      console.log(PageName)
       document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
           document.title = PageName;

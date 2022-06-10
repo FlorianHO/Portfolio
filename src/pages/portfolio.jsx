@@ -13,6 +13,7 @@ const Portfolio = () => {
         <meta name="description" content="Yes" />
         <title>Portfolio · Houdu Florian 😎</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="canonical" href="https://florianhoudu.fr/portfolio" />
       </Head>
       <header>
         <Navigation />
