@@ -40,9 +40,13 @@ const MyApp = ({ Component, pageProps }) => {
         />
         <meta name="robots" content="INDEX,FOLLOW" />
         <meta name="theme-color" content="#181920" />
+        <meta name='application-name' content='Florian - PWA' />
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta name='apple-mobile-web-app-status-bar-style' content='default' />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/logo192.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel='mask-icon' href='/maskable_icon.png' color='#ff5d38' />
         <link
           rel="alternate"
           type="text/html"
@@ -55,7 +59,7 @@ const MyApp = ({ Component, pageProps }) => {
           type="text/html"
           hrefLang="en"
           href="https://florianhoudu.fr/en"
-          title="Français"
+          title="English"
         />
       </Head>
       {!loading ? (

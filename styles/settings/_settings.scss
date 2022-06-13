@@ -129,13 +129,14 @@ a {
 /////////////////////////  Loader  /////////////////////////
 
 #Loader {
+  cursor: none;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  cursor: none;
   user-select: none;
   pointer-events: none;
   background: hsl(0, 0%, 13%);
+  @extend %flex-center;
   *::selection {
     background: transparent;
   }
