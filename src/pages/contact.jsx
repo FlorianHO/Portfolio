@@ -1,20 +1,10 @@
 import Head from "next/head";
-import emailjs from '@emailjs/browser';
+
 import { motion } from "framer-motion";
 import Navigation from "../components/Navigation"
 
 const Contact = () => {
-  function sendEmail(e) {
-    e.preventDefault();
 
-    emailjs.sendForm('service_f7fs2bj', 'template_l6v7o7x', e.target, 'cqpsfguPTSB545kml')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset();
-  };
 
   return (
     <motion.div>
@@ -28,7 +18,7 @@ const Contact = () => {
         <Navigation />
       </header>
       <section id="contact">
-        <form method="POST" onSubmit={sendEmail}>
+        <form method="POST">
           <input type="text" name="subject" />
           <input type="text" name="name" />
           <input type="email" name="email" />
