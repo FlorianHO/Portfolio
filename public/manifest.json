@@ -1,6 +1,7 @@
 {
   "short_name": "Florian",
   "name": "Florian HOUDU",
+  "description": "Site",
   "icons": [
     { 
       "src": "maskable_icon.png",
@@ -28,5 +29,6 @@
   "scope": "/",
   "display": "standalone",
   "theme_color": "#181920",
-  "background_color": "#181920"
+  "background_color": "#181920",
+  "orientation": "portrait"
 }
