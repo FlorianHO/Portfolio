@@ -161,7 +161,7 @@ export default function Home() {
               height={70}
             />
           </a>
-        </div>
+        </div>  
       </header>
       <a href="#home-content">
         <div className="btn-down-home" ref={arrow}></div>
@@ -265,8 +265,8 @@ export default function Home() {
                       <h4>Concepteur web</h4>
                       <h5>
                         <a href="https://cassiopea.ca/" target="BLANK">
-                          Cassiopea
-                        </a>
+                          Cassiopea 
+                        </a> · Stage
                       </h5>
                     </div>
                     <div className="container-technos">
@@ -302,9 +302,37 @@ export default function Home() {
                 </div>
                 <div className="exp-2">
                   <div className="dot"></div>
+                    <div className="exp-2-text">
+                      <div className="container-text">
+                        <h4>Assistant administratif</h4>
+                        <h5>Fongecif Normandie · CDD</h5>
+                      </div>
+                      <div className="container-technos">
+                        <div className="techno">
+                          <span>Cegep</span>
+                        </div>
+                        <div className="techno">
+                          <span>Word</span>
+                        </div>
+                        <div className="techno">
+                          <span>Excel</span>
+                        </div>
+                      </div>
+                    </div>
                 </div>
                 <div className="exp-3">
                   <div className="dot"></div>
+                  <div className="exp-3-text">
+                      <div className="container-text">
+                        <h4>Stagiaire</h4>
+                        <h5>Crêperie des Halles · Stage</h5>
+                      </div>
+                      <div className="container-technos">
+                        <div className="techno">
+                          <span>Activités physiques</span>
+                        </div>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>

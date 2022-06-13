@@ -242,6 +242,7 @@
       }
     }
   }
+
   #experience {
     min-height: 700px;
     .container-experience-timeline {
@@ -255,7 +256,8 @@
         background: $light-color-text;
         position: relative;
         h4,
-        h5 a {
+        h5 a,
+        h5 {
           color: $background-dark;
         }
         .exp-1-text {
@@ -272,7 +274,66 @@
             border-bottom: 12px solid transparent;
             border-right: 15px solid hsl(0, 0%, 98%);
             top: 5px;
-            left: -15px;
+            left: -10px;
+          }
+          .container-text {
+            padding: 0.7rem 0.8rem;
+            font-size: calc(0.3vmin + 0.9rem);
+            a:hover {
+              transition: all 0.2s ease-out;
+              color: #c6aa69;
+            }
+          }
+          &:hover {
+            transform: scale(1.02);
+            transition: 0.3s ease-out;
+          }
+        }
+        .exp-2-text {
+          background: hsl(0, 0%, 98%);
+          width: 350px;
+          height: 120px;
+          position: absolute;
+          right: 25px;
+          top: 150px;
+          &::before {
+            content: "";
+            position: absolute;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 15px solid hsl(0, 0%, 98%);
+            transform: rotate(180deg);
+            top: 5px;
+            right: -10px;
+          }
+          .container-text {
+            padding: 0.7rem 0.8rem;
+            font-size: calc(0.3vmin + 0.9rem);
+            a:hover {
+              transition: all 0.2s ease-out;
+              color: #c6aa69;
+            }
+          }
+          &:hover {
+            transform: scale(1.02);
+            transition: 0.3s ease-out;
+          }
+        }
+        .exp-3-text {
+          background: hsl(0, 0%, 98%);
+          width: 350px;
+          height: 120px;
+          position: relative;
+          top: 175px;
+          left: 25px;
+          &::before {
+            content: "";
+            position: absolute;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 15px solid hsl(0, 0%, 98%);
+            top: 5px;
+            left: -10px;
           }
           .container-text {
             padding: 0.7rem 0.8rem;

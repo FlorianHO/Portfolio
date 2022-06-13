@@ -1,39 +1,35 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import { LayoutGroup } from "framer-motion"
 import Loader from "../components/Loader.jsx";
 import Cursor from "../components/Cursor.jsx";
 import "../../styles/index.scss";
 
-function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(false);
-  
+const MyApp = ({ Component, pageProps }) => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     setLoading(false);
     document.getElementById("__next").classList.add("fade-in");
-    let lastUrl = location.href; 
-    new MutationObserver(() => {
-      const url = location.href;
-      if (url !== lastUrl) {
-        lastUrl = url;
-        ChangedPage();
-      }
-    }).observe(document, {subtree: true, childList: true});
 
-    const ChangedPage = () => {
-   
-    }
-    
-    window.addEventListener("popstate", () => {
+    let DocumentNameChange = () => {
       let PageName = document.title;
       document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
-          document.title = PageName;
+         document.title = PageName;
         } else {
-          document.title = "Come back 😥";
-        }
+         document.title = "Come back 😥";
+       }
       });
-    });
+    }
+
+    let currentUrl = location.href;
+    setInterval(() => {
+      if (location.href !== currentUrl) {
+        currentUrl = location.href;
+        DocumentNameChange();
+      }
+    }, 1000);
   }, []);
   return (
     <>
@@ -52,6 +48,13 @@ function MyApp({ Component, pageProps }) {
           type="text/html"
           hrefLang="fr"
           href="https://florianhoudu.fr/"
+          title="Français"
+        />
+        <link
+          rel="alternate"
+          type="text/html"
+          hrefLang="en"
+          href="https://florianhoudu.fr/en"
           title="Français"
         />
       </Head>

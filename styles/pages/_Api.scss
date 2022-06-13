@@ -12,18 +12,27 @@
     }
   }
   .container-meteo {
+    padding: 0px 30px;
     position: relative;
     margin-top: 3rem;
     background: hsl(196, 96%, 32%);
+    border-radius: 10px;
     width: 75%;
-    height: 110px;
+    min-height: 130px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     .container-left-meteo {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 15px;
+      gap: 35px;
+      font-size: 1.4rem;
+      .api-card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
     .container-right-meteo {
       display: flex;
@@ -33,6 +42,7 @@
       }
       p {
         padding-right: 50px;
+        font-size: 1rem;
       }
     }
   }

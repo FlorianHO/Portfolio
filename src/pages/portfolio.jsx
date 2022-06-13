@@ -17,6 +17,7 @@ const Portfolio = () => {
       </Head>
       <header>
         <Navigation />
+        <h1>Portfolio</h1>
       </header>
       <section id="portfolio">
         <div className="container-portfolio"></div>

@@ -14,7 +14,6 @@ const Meteo = () => {
     const result = await axios(Url);
     setData(result.data);
     setIsFetched(true);
-    
   };
 
   const handleSubmit = (e) => {
@@ -37,24 +36,53 @@ const Meteo = () => {
               placeholder="Recherchez une ville..."
               ref={InputMeteo}
             />
-            <button type="submit">Soumettre</button>
+            <button type="submit">Actualiser</button>
           </form>
           <div className="container-meteo">
             <div className="container-left-meteo">
-              <div className="city-name">
+              <div className="api-card-content">
+              <Image
+                  src="/assets/images/home-logo.svg"
+                  alt="Logo du langage Python"
+                  width={40}
+                  height={40}
+                />
                 <h3>{data.name}</h3>
               </div>
-
-              <div className="api-humidity">
+              <div className="api-card-content">
+              <Image
+                  src="/assets/images/python.svg"
+                  alt="Logo du langage Python"
+                  width={40}
+                  height={40}
+                />
                 <h3>{data.main.humidity}%</h3>
               </div>
-              <div className="api-wind">
+              <div className="api-card-content">
+              <Image
+                  src="/assets/images/python.svg"
+                  alt="Logo du langage Python"
+                  width={40}
+                  height={40}
+                />
                 <h3>{data.wind.speed} km/h</h3>
               </div>
-              <div className="temp-min">
+              <div className="api-card-content">
+              <Image
+                  src="/assets/images/python.svg"
+                  alt="Logo du langage Python"
+                  width={40}
+                  height={40}
+                />
                 <h3>{data.main.temp_min}°C</h3>
               </div>
-              <div className="temp-max">
+              <div className="api-card-content">
+              <Image
+                  src="/assets/images/python.svg"
+                  alt="Logo du langage Python"
+                  width={40}
+                  height={40}
+                />
                 <h3>{data.main.temp_max}°C</h3>
               </div>
             </div>
