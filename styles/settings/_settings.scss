@@ -233,7 +233,7 @@ header {
           transform: scaleX(0);
           transition: transform 0.7s;
         }
-        &:hover:before {
+        &:not(.link-active):hover:before {
           transform-origin: 0 100%;
           transform: scaleX(1);
         }
@@ -527,6 +527,7 @@ footer {
       transform: translateY(11px);
     }
     &.active {
+      left: 23%;
       z-index: 3;
       .burger-line:nth-child(2) {
         display: none;

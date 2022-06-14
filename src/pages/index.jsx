@@ -47,6 +47,17 @@ export default function Home() {
       duration: 1,
     });
 
+    gsap.to(iconMedia("a"), {
+      x: -25,
+      stagger: 0.33,
+      repeatDelay: 1,
+      delay: 2,
+      duration: 1,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+
     gsap.to(AllLanguagesLogo(".skill"), {
       y: -50,
       opacity: 1,
@@ -59,6 +70,16 @@ export default function Home() {
     gsap.to(arrow.current, {
       scale: 1.5,
       duration: 1.2,
+    });
+
+
+    gsap.to(arrow.current, {
+      y: 20,
+      delay: 0.4,
+      duration: 1.8,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
     });
   }, []);
   return (
@@ -107,12 +128,10 @@ export default function Home() {
         <div className="container-infos">
           <div className="domains">
             <span>
-              - Application mobile - Logiciel - Maquette réseau - Application
-              web - Systèmes embarqués - Base de données - PWA&nbsp;
+            {language.indexPresentation[9]}&nbsp;
             </span>
             <span>
-              - Application mobile - Logiciel - Maquette réseau - Application
-              web - Systèmes embarqués - Base de données - PWA&nbsp;
+            {language.indexPresentation[9]}&nbsp;
             </span>
           </div>
           <div className="technos">

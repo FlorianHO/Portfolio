@@ -43,7 +43,7 @@ const Cursor = () => {
 
     return () => {
       document.removeEventListener("mousemove", CursorMove);
-      document.removeEventListener("click", CursorClick);
+      document.removeEventListener("click", CursorClick); 
       document.removeEventListener("mouseenter", CursorHover);
     };
   }, []);
