@@ -9,6 +9,8 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import fr from "../content/Fr.jsx";
 import en from "../content/En.jsx";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const router = useRouter();
@@ -16,10 +18,8 @@ export default function Home() {
   const mediaLogo = useRef();
   const languagesLogo = useRef();
   const arrow = useRef(null);
-  const media = useRef(null);
   const iconMedia = gsap.utils.selector(mediaLogo);
   const AllLanguagesLogo = gsap.utils.selector(languagesLogo);
-
   const { locale } = router;
   const language = locale === "fr" ? fr : en;
 
@@ -279,7 +279,8 @@ export default function Home() {
               <div className="experience-timeline">
                 <div className="exp-1">
                   <div className="dot"></div>
-                  <div className="exp-1-text">
+                  <div className="exp-1-text" data-aos="fade-left"
+                                              data-aos-easing="linear" data-aos-duration="600">
                     <div className="container-text">
                       <h4>Concepteur web</h4>
                       <h5>
@@ -321,7 +322,8 @@ export default function Home() {
                 </div>
                 <div className="exp-2">
                   <div className="dot"></div>
-                    <div className="exp-2-text">
+                    <div className="exp-2-text" data-aos="fade-right"
+                                              data-aos-easing="linear" data-aos-duration="700">
                       <div className="container-text">
                         <h4>Assistant administratif</h4>
                         <h5>Fongecif Normandie · CDD</h5>
@@ -341,7 +343,8 @@ export default function Home() {
                 </div>
                 <div className="exp-3">
                   <div className="dot"></div>
-                  <div className="exp-3-text">
+                  <div className="exp-3-text" data-aos="fade-left"
+                   data-aos-easing="linear" data-aos-duration="600">
                       <div className="container-text">
                         <h4>Stagiaire</h4>
                         <h5>Crêperie des Halles · Stage</h5>
