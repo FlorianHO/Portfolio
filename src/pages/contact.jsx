@@ -1,10 +1,8 @@
 import Head from "next/head";
-
 import { motion } from "framer-motion";
 import Navigation from "../components/Navigation"
 
 const Contact = () => {
-
 
   return (
     <motion.div>
@@ -15,7 +13,7 @@ const Contact = () => {
         <link rel="canonical" href="https://florianhoudu.fr/contact" />
       </Head>
       <header>
-        <Navigation />
+        {/* <Navigation /> */}
       </header>
       <section id="contact">
         <form method="POST">

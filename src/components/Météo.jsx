@@ -7,7 +7,7 @@ const Meteo = () => {
   const [City, setCity] = useState("Montréal");
   const [isFetched, setIsFetched] = useState(false);
   let InputMeteo = useRef();
-  const ApiKey = "27e18a30d8865d97b5eafb030c307530";
+  const ApiKey = process.env.NEXT_PUBLIC_API_URL;
   let Url = `https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${ApiKey}&units=metric&lang=fr`;
 
   const fetchData = async () => {
@@ -21,8 +21,18 @@ const Meteo = () => {
     setCity(InputMeteo.current.value);
     fetchData();
   };
+  
 
   useEffect(() => {
+
+     
+      
+  
+
+    
+    
+
+
     fetchData();
   }, []);
   if (isFetched) {
