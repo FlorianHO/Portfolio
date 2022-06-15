@@ -9,7 +9,6 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import fr from "../content/Fr.jsx";
 import en from "../content/En.jsx";
-import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
@@ -26,9 +25,9 @@ export default function Home() {
   useEffect(() => {
     const typed = new Typed(description.current, {
       strings: [
-        "Je suis étudiant en 2ème année de prépa intégrée informatique.",
-        "Je cherche",
-        "Et ",
+        language.indexPresentation[10],
+        language.indexPresentation[11],
+        language.indexPresentation[12],
       ],
       startDelay: 150,
       typeSpeed: 150,
@@ -361,6 +360,32 @@ export default function Home() {
           </div>
           <div id="formation">
             <h3>{language.indexPresentation[4]}</h3>
+            <div className="container-experience-timeline">
+              <div className="experience-timeline">
+              <div className="form-1">
+                  <div className="dot"></div>
+                    <div className="form-1-text" data-aos="fade-right"
+                                              data-aos-easing="linear" data-aos-duration="700">
+                      <div className="container-text">
+                        <h4>Assistant administratif</h4>
+                        <h5>Fongecif Normandie · CDD</h5>
+                      </div>
+                      <div className="container-technos">
+                        <div className="techno">
+                          <span>Cegep</span>
+                        </div>
+                        <div className="techno">
+                          <span>Word</span>
+                        </div>
+                        <div className="techno">
+                          <span>Excel</span>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              
+              </div>
+            </div>
           </div>
         </section>
       </main>

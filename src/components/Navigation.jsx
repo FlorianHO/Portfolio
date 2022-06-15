@@ -127,9 +127,9 @@ const Navigation = () => {
           </li>
 
           <li>
-            <Link href="/">
+            <Link href="/terre">
               <a
-                className={router.pathname === "/planets" ? "link-active" : ""}
+                className={router.pathname === "/terre" ? "link-active" : ""}
               >
                {language.links[3]}
               </a>

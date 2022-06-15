@@ -6,13 +6,13 @@ import Loader from "../components/Loader.jsx";
 import Cursor from "../components/Cursor.jsx";
 import "../../styles/index.scss";
 
-
 const MyApp = ({ Component, pageProps }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(false);
    document.getElementById("__next").classList.add("fade-in");
+   AOS.init();
 
     let DocumentNameChange = () => {
       let PageName = document.title;
@@ -24,9 +24,6 @@ const MyApp = ({ Component, pageProps }) => {
        }
       });
     }
-
-    AOS.init();
-
 
     let currentUrl = location.href;
     setInterval(() => {

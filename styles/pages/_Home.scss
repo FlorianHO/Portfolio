@@ -354,16 +354,46 @@
           background: $light-color-text;
           position: absolute;
           border-radius: 50%;
-          top: -1px;
-          left: -65%;
+          left: -59%;
           border: 2px solid hsl(0, 0%, 100%);
         }
       }
     }
   }
-  #formation {
-    height: 500px;
-    background: hsl(42, 28%, 67%);
+}
+
+#formation {
+  min-height: 700px;
+  background: hsl(42, 28%, 67%);
+  .container-experience-timeline {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 3.5rem;
+    .experience-timeline {
+      width: 4.5px;
+      height: 500px;
+      background: $background-dark;
+      position: relative;
+      .form-1-text {
+        background: hsl(0, 0%, 98%);
+        width: 350px;
+        height: 120px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        &::before {
+          content: "";
+          position: absolute;
+          border-top: 12px solid transparent;
+          border-bottom: 12px solid transparent;
+          border-right: 15px solid hsl(0, 0%, 98%);
+          top: 5px;
+          right: -10px;
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }
 
