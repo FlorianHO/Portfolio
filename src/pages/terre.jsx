@@ -5,17 +5,9 @@ import * as THREE from 'three';
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import Navigation from "../components/Navigation";
+import Batman from "../components/Batman/modelDraco"
 
 const Terre = () => {
-  let Box = () => {
-    return (
-      <mesh>
-        <boxBufferGeometry attach="geometry" />
-        <meshLambertMaterial attach="material" color="hotpink" />
-      </mesh>
-    )
-  }
-
   useEffect(() => {
 
   }, []);
@@ -32,12 +24,12 @@ const Terre = () => {
         <Navigation />
       </header>
    <div className="earth-container">
-      <Canvas id="earth">
-        <OrbitControls />
+      <Canvas>
+        <OrbitControls autoRotate={true} />
         <Stars />
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={1} />
         <spotLight position={[10, 15, 10]} angle={0.3} />
-         <Box />
+        <Batman />
       </Canvas>
    </div>
     </motion.div>
