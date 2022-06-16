@@ -31,7 +31,7 @@ const Cursor = () => {
     document.addEventListener("click", CursorClick);
 
     let HoverElement = document.querySelectorAll(
-      "a, button, .color-button, input, option, select, .hamburger-logo"
+      "a, button, .color-button, input, option, select, .hamburger-logo, .earth-container"
     );
     HoverElement.forEach((element) => {
       element.addEventListener("mouseenter", CursorHover);

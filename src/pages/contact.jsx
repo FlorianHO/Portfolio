@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import Navigation from "../components/Navigation"
 
 const Contact = () => {
+  let handleOnSubmit = async (e) => {
+    e.preventDefault();
+  }
 
   return (
     <motion.div>
@@ -16,7 +19,7 @@ const Contact = () => {
         {/* <Navigation /> */}
       </header>
       <section id="contact">
-        <form method="POST">
+        <form method="POST" onSubmit={handleOnSubmit}>
           <input type="text" name="subject" />
           <input type="text" name="name" />
           <input type="email" name="email" />
