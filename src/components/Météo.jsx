@@ -22,17 +22,7 @@ const Meteo = () => {
     fetchData();
   };
   
-
   useEffect(() => {
-
-     
-      
-  
-
-    
-    
-
-
     fetchData();
   }, []);
   if (isFetched) {
