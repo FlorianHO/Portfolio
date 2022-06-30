@@ -3,7 +3,7 @@ import Image from "next/image";
 import axios from "axios";
 
 const Meteo = () => {
-  const [data, setData] = useState<Array<any>>([]);
+  const [data, setData] = useState<any>([]);
   const [City, setCity] = useState<any>("Montréal");
   const [isFetched, setIsFetched] = useState<any>(false);
   let InputMeteo = useRef<any>();
