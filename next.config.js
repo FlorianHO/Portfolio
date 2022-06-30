@@ -1,32 +1,32 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
-	env: {
-		BASE_URL: process.env.NEXT_PUBLIC_SITE_URL
-	}
+  reactStrictMode: true,
+  env: {
+    BASE_URL: process.env.NEXT_PUBLIC_SITE_URL,
+  },
 };
 
 const nextLangs = {
-	i18n: {
-		locales: ['fr', 'en'],
-		defaultLocale: 'fr'
-	}
+  i18n: {
+    locales: ["fr", "en"],
+    defaultLocale: "fr",
+  },
 };
 
 module.exports = {
-	resolve: {
-		extensions: ['.js', '.jsx', '.ts', '.tsx']
-	}
+  resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
+  },
 };
 
-const withPWA = require('next-pwa');
+const withPWA = require("next-pwa");
 
 module.exports = withPWA({
-	pwa: {
-		dest: 'public',
-		register: true,
-		skipWaiting: true
-	}
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+  },
 });
 
 module.exports = nextConfig;

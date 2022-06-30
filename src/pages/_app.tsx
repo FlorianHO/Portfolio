@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
-import { LayoutGroup } from "framer-motion"
-import AOS from "aos";
+import Head from "../../node_modules/next/head";
+import { LayoutGroup } from "framer-motion";
+var AOS = require('aos');
 import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
 import "../../styles/index.scss";
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps}) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
    setLoading(false);
-   document.getElementById("__next").classList.add("fade-in");
+   (document.getElementById("__next") as HTMLFormElement).classList.add("fade-in");
    AOS.init();
 
     let DocumentNameChange = () => {

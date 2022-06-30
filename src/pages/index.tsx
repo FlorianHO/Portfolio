@@ -1,10 +1,10 @@
 import { useRef, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "../../node_modules/next/router";
 import Head from "next/head";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion"
 import gsap from "gsap";
-import Typed from "typed.js";
+import Typed from "typed.js"
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import fr from "../content/Fr.jsx";
@@ -13,10 +13,10 @@ import "aos/dist/aos.css";
 
 export default function Home() {
   const router = useRouter();
-  const description = useRef();
-  const mediaLogo = useRef();
-  const languagesLogo = useRef();
-  const arrow = useRef(null);
+  const description = useRef<any>();
+  const mediaLogo = useRef<any>();
+  const languagesLogo = useRef<any>();
+  const arrow = useRef<any>(null);
   const iconMedia = gsap.utils.selector(mediaLogo);
   const AllLanguagesLogo = gsap.utils.selector(languagesLogo);
   const { locale } = router;

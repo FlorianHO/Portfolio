@@ -1,16 +1,12 @@
 import Head from "next/head";
-import { motion } from "framer-motion"; 
-import { useEffect } from "react";
-import * as THREE from 'three';
+import { motion } from "framer-motion";
+import * as THREE from 'three'; 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars } from "@react-three/drei";
 import Navigation from "../components/Navigation";
 import Batman from "../components/Three.js/modelDraco"
 
 const Terre = () => {
-  useEffect(() => {
-
-  }, []);
 
   return (
     <motion.div>
