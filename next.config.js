@@ -13,7 +13,7 @@ const nextLangs = {
   },
 };
 
-module.exports = {
+const nextExtensions = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
@@ -21,7 +21,7 @@ module.exports = {
 
 const withPWA = require("next-pwa");
 
-module.exports = withPWA({
+const nextPWA = withPWA({
   pwa: {
     dest: "public",
     register: true,
@@ -31,3 +31,5 @@ module.exports = withPWA({
 
 module.exports = nextConfig;
 module.exports = nextLangs;
+module.exports = nextExtensions;
+module.exports = nextPWA;
