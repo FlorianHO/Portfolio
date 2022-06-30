@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode  } from "react";
 import Head from "../../node_modules/next/head";
 import { LayoutGroup } from "framer-motion";
 var AOS = require('aos');
@@ -6,7 +6,8 @@ import Loader from "../components/Loader";
 import Cursor from "../components/Cursor";
 import "../../styles/index.scss";
 
-const MyApp = ({ Component, pageProps}) => {
+
+const MyApp = ({ Component, pageProps} : any) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
    setLoading(false);
