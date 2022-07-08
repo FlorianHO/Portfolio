@@ -1,0 +1,489 @@
+/////////////////////////  Header de la page  /////////////////////////
+
+.home-header {
+  min-height: 110vh;
+  .resume-button {
+    position: absolute;
+    top: 35px;
+    left: 10%;
+    @extend %flex-center;
+    width: 150px;
+    height: 60px;
+    border-radius: $radius-button-resume;
+    position: relative;
+    font-size: 1.5rem;
+    transition: 1s box-shadow;
+    box-shadow: 0 0 5px hsla(0, 25%, 92%, 0.25);
+    color: $background-dark;
+    background: hsl(0, 0%, 98%);
+    border: 2px solid $light-color-text;
+    &:hover {
+      box-shadow: 0 5px 35px 0 hsla(0, 0%, 98%, 0.1);
+    }
+    &:active {
+      transform: scale(1.1);
+      transition: all 500ms ease-out;
+    }
+    &:hover::before,
+    &:hover::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 106%;
+      height: 106%;
+      background: hsl(332, 78%, 79%);
+      border-radius: $radius-button-resume;
+      animation: 1s resume-dance infinite;
+    }
+    &:hover::after {
+      background: hsl(45, 74%, 63%);
+      animation: 0.5s resume-dance infinite;
+    }
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .container-social-media {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: -30px;
+    top: 40%;
+    transform: translateY(-50%);
+    gap: 15px;
+    img {
+      filter: invert(50%) sepia(90%) saturate(20%) hue-rotate(0deg)
+        brightness(200%) contrast(100%);
+      width: 70px;
+      transition: all 0.4s ease-out;
+      &:hover {
+        filter: invert(50%) sepia(90%) saturate(600%) hue-rotate(0deg)
+          brightness(120%) contrast(100%);
+      }
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .container-infos {
+    @include posAbs(45%, 74%, 50%, 50%);
+    overflow: hidden;
+    width: 500px;
+    font-size: 50px;
+    text-transform: uppercase;
+    pointer-events: none;
+    .domains {
+      overflow: hidden;
+      display: flex;
+      width: 80%;
+      span {
+        white-space: nowrap;
+        animation: textScroll1 25s linear infinite;
+      }
+    }
+    .technos {
+      overflow: hidden;
+      display: flex;
+      width: 90%;
+      span {
+        white-space: nowrap;
+        animation: textScroll2 20s linear infinite;
+      }
+    }
+    .tools {
+      overflow: hidden;
+      display: flex;
+      width: 68%;
+      span {
+        white-space: nowrap;
+        animation: textScroll1 25s linear infinite;
+      }
+    }
+  }
+}
+
+.btn-down-home {
+  @include posAbs(75%, 50%, 5%, 50%);
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  width: 1px;
+  background: linear-gradient(to bottom, hsl(43, 45%, 64%), hsl(43, 60%, 83%));
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0.85%;
+    transform: rotate(135deg);
+    width: 19px;
+    height: 19px;
+    border-width: 1.5px 1.5px 0 0;
+    border-style: solid;
+    border-color: linear-gradient(
+      to right,
+      hsl(43, 45%, 64%),
+      hsl(43, 60%, 83%)
+    );
+  }
+}
+
+.container-text-home {
+  @include posAbs(40%, 10%, 5%, 50%);
+  font-size: calc(2vmin + 1.3rem);
+  h1 {
+    position: relative;
+    span {
+      display: inline-block;
+      color: transparent;
+      position: relative;
+      overflow: hidden;
+      animation: txt-appearance 0s 1.25s forwards;
+    }
+    span::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background: hsl(225, 71%, 56%);
+      animation: slide-in 0.75s 0.3s ease-out forwards,
+        slide-out 0.75s 1.3s ease-out forwards;
+    }
+  }
+  h2 {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 18%;
+      height: 1px;
+      background: $selected-color;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      width: 10%;
+      height: 1px;
+      background: $selected-color;
+    }
+    span {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      color: transparent;
+      animation: txt-appearance 0s 1s forwards;
+    }
+    span::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      background: hsl(6, 91%, 71%);
+      animation: slide-in 0.75s ease-out forwards,
+        slide-out 0.75s 1s ease-out forwards;
+    }
+  }
+}
+
+#home-content #resume {
+  h3 {
+    color: hsl(0, 0%, 98%);
+    font-size: calc(1.3vmin + 1.1rem);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+  }
+  #skills {
+    min-height: 425px;
+    background: hsl(42, 28%, 67%);
+    .container-card-skills {
+      @extend %flex-center;
+      margin-top: 50px;
+      flex-wrap: wrap;
+      padding-top: 4.5rem;
+      gap: 15px;
+      .skill {
+        opacity: 0;
+        border: 1px solid hsl(43, 21%, 47%);
+        border-radius: 15%;
+        @extend %flex-center;
+        flex-direction: column;
+        width: 95px;
+        background: hsl(42, 28%, 64%);
+        height: 80px;
+        gap: 4px;
+        box-shadow: 0 25px 35px 10px hsla(0, 5%, 13%, 0.1);
+        animation: skill-move 3.5s infinite linear;
+        @for $i from 1 through 9 {
+          &:nth-child(#{$i}) {
+            animation-delay: 4s+ ($i + 1.8s);
+          }
+        }
+        img {
+          width: 40px;
+          height: 40px;
+        }
+        span {
+          color: hsl(0, 0%, 98%);
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+
+  #experience {
+    min-height: 700px;
+    .container-experience-timeline {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 3.5rem;
+      .experience-timeline {
+        width: 4.5px;
+        height: 500px;
+        background: $light-color-text;
+        position: relative;
+        h4,
+        h5 a,
+        h5 {
+          color: $background-dark;
+        }
+        .exp-1-text {
+          background: hsl(0, 0%, 98%);
+          width: 350px;
+          height: 120px;
+          position: relative;
+          top: 25px;
+          left: 25px;
+          &::before {
+            content: "";
+            position: absolute;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 15px solid hsl(0, 0%, 98%);
+            top: 5px;
+            left: -10px;
+          }
+          .container-text {
+            padding: 0.7rem 0.8rem;
+            font-size: calc(0.3vmin + 0.9rem);
+            a:hover {
+              transition: all 0.2s ease-out;
+              color: #c6aa69;
+            }
+          }
+          &:hover {
+            transform: scale(1.02);
+            transition: 0.3s ease-out;
+          }
+        }
+        .exp-2-text {
+          background: hsl(0, 0%, 98%);
+          width: 350px;
+          height: 120px;
+          position: absolute;
+          right: 25px;
+          top: 150px;
+          &::before {
+            content: "";
+            position: absolute;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 15px solid hsl(0, 0%, 98%);
+            transform: rotate(180deg);
+            top: 5px;
+            right: -10px;
+          }
+          .container-text {
+            padding: 0.7rem 0.8rem;
+            font-size: calc(0.3vmin + 0.9rem);
+            a:hover {
+              transition: all 0.2s ease-out;
+              color: #c6aa69;
+            }
+          }
+          &:hover {
+            transform: scale(1.02);
+            transition: 0.3s ease-out;
+          }
+        }
+        .exp-3-text {
+          background: hsl(0, 0%, 98%);
+          width: 350px;
+          height: 120px;
+          position: relative;
+          top: 175px;
+          left: 25px;
+          &::before {
+            content: "";
+            position: absolute;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 15px solid hsl(0, 0%, 98%);
+            top: 5px;
+            left: -10px;
+          }
+          .container-text {
+            padding: 0.7rem 0.8rem;
+            font-size: calc(0.3vmin + 0.9rem);
+            a:hover {
+              transition: all 0.2s ease-out;
+              color: #c6aa69;
+            }
+          }
+          &:hover {
+            transform: scale(1.02);
+            transition: 0.3s ease-out;
+          }
+        }
+        .dot {
+          width: 10px;
+          height: 10px;
+          background: $light-color-text;
+          position: absolute;
+          border-radius: 50%;
+          left: -59%;
+          border: 2px solid hsl(0, 0%, 100%);
+        }
+      }
+    }
+  }
+}
+
+#formation {
+  min-height: 700px;
+  background: hsl(42, 28%, 67%);
+  .container-experience-timeline {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 3.5rem;
+    .experience-timeline {
+      width: 4.5px;
+      height: 500px;
+      background: $background-dark;
+      position: relative;
+      .form-1-text {
+        background: hsl(0, 0%, 98%);
+        width: 350px;
+        height: 120px;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        &::before {
+          content: "";
+          position: absolute;
+          border-top: 12px solid transparent;
+          border-bottom: 12px solid transparent;
+          border-right: 15px solid hsl(0, 0%, 98%);
+          top: 5px;
+          right: -10px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+.container-technos {
+  display: flex;
+  flex-wrap: wrap;
+  .techno {
+    background: $light-color-text;
+    border-radius: 2rem;
+    width: 40px;
+    height: 15px;
+    margin-left: 0.8rem;
+    @extend %flex-center;
+    span {
+      color: $background-dark;
+    }
+  }
+}
+
+/////////////////////////  Animations  /////////////////////////
+
+@keyframes resume-dance {
+  0% {
+    transform: translate(-2px, -2px);
+  }
+  14% {
+    transform: translate(0px, -2px);
+  }
+  28% {
+    transform: translate(2px, -2px);
+  }
+  42% {
+    transform: translate(2px, 0px);
+  }
+  57% {
+    transform: translate(2px, 2px);
+  }
+  71% {
+    transform: translate(0px, 2px);
+  }
+  85% {
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    transform: translate(-2px, 0px);
+  }
+}
+
+@keyframes textScroll1 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes textScroll2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-out {
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes txt-appearance {
+  100% {
+    color: $light-color-text;
+  }
+}
+
+@keyframes skill-move {
+  0% {
+    transform: translateY(-50);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  10% {
+    transform: translateY(-50);
+  }
+}
