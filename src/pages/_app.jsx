@@ -46,6 +46,7 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name='application-name' content='Florian - PWA' />
         <meta name='apple-mobile-web-app-capable' content='yes' />
         <meta name='apple-mobile-web-app-status-bar-style' content='default' />
+        <meta name="google-site-verification" content="WzKrXDCHTtBTBxDAcAOk8iMEPOnTC0yXDJh9jTo58kM" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/logo192.png" />
         <link rel='mask-icon' href='/maskable_icon.png' color='#ff5d38' />
