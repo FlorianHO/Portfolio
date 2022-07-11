@@ -368,7 +368,7 @@ export default function Home() {
                      data-aos-easing="linear" data-aos-duration="700">
                       <div className="container-text">
                         <h4>Cycle préparatoire intégré en Informatique</h4>
-                        <h5>CESI École d'ingénieurs · Saint-Étienne-du-Rouvray</h5>
+                        <h5>CESI École dingénieurs · Saint-Étienne-du-Rouvray</h5>
                       </div>
                       <div className="container-technos">
                         <div className="techno">
@@ -418,7 +418,7 @@ export default function Home() {
                     <div className="form-2-text" data-aos="fade-right"
                      data-aos-easing="linear" data-aos-duration="700">
                       <div className="container-text">
-                      <h4>Baccalauréat Technologique Sciences et Technologies de l'Industrie et du Développement Durable</h4>
+                      <h4>Baccalauréat Technologique Sciences et Technologies de lIndustrie et du Développement Durable</h4>
                         <h5>Lycée Delamare Deboutteville · Forges-Les-Eaux</h5>
                       </div>
                       <div className="container-technos">
@@ -439,7 +439,7 @@ export default function Home() {
                     <div className="form-3-text" data-aos="fade-left"
                      data-aos-easing="linear" data-aos-duration="700">
                       <div className="container-text">
-                        <h4>Baccalauréat Technologique Sciences et Technologies de l'Industrie et du Développement Durable</h4>
+                        <h4>Baccalauréat Technologique Sciences et Technologies de lIndustrie et du Développement Durable</h4>
                         <h5>Collège Francis Yard · Buchy</h5>
                       </div>
                       <div className="container-technos">
