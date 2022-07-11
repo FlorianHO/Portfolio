@@ -26,7 +26,7 @@
     "nodemailer": "^6.7.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "sass": "^1.52.2",
+    "sass": "^1.53.0",
     "sparkpost": "^2.1.4",
     "three": "^0.141.0",
     "typed.js": "^2.0.12"
