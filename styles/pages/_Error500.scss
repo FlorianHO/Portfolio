@@ -1,0 +1,26 @@
+#error500 {
+  height: 100vh;
+  overflow: hidden;
+  background-color: hsl(0, 3%, 7%);
+  pointer-events: none;
+  user-select: none;
+  @extend %flex-center;
+  flex-direction: column;
+  font-family: $font, serif;
+  h1 {
+    font-size: calc(2.5vmin + 1.8rem);
+    letter-spacing: 2px;
+    background: linear-gradient(#90ee90, #fff, rgb(245, 0, 0));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  h2 {
+    font-size: calc(1.5vmin + 0.9rem);
+    letter-spacing: 2px;
+    background: linear-gradient(#90ee90, #fff, rgb(253, 0, 0));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+}
