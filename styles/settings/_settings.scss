@@ -124,6 +124,12 @@ a {
   }
 }
 
+h1,
+h2,
+h3 {
+  font-family: $font-title;
+}
+
 /////////////////////////  Loader  /////////////////////////
 
 #Loader {
@@ -495,6 +501,15 @@ footer {
       format("woff2"),
     url("../../public/assets/fonts/brandon-grotesque-black-58a8a3e824392-webfont.woff")
       format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ranademedium";
+  src: url("../../public/assets/fonts/ranade-medium-webfont.woff2")
+      format("woff2"),
+    url("../../public/assets/fonts/ranade-medium-webfont.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
 }

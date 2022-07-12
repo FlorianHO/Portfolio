@@ -1,9 +1,7 @@
 .light {
   background: hsl(43, 61%, 84%);
   color: $background-dark;
-  select {
-    color: $background-dark;
-  }
+
   .color-button {
     background: $background-dark;
     .btn-moon {
@@ -22,6 +20,9 @@
         $selected-color 50%,
         $background-dark 50%
       );
+    }
+    select {
+      color: $background-dark;
     }
   }
 }
