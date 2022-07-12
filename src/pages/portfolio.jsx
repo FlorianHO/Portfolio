@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 const Portfolio = () => {
   return (
@@ -22,6 +23,7 @@ const Portfolio = () => {
       <section id="portfolio">
         <div className="container-portfolio"></div>
       </section>
+      <Footer />
     </motion.div>
   );
 };

@@ -1,7 +1,11 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Navigation from "../components/Navigation"
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import fr from "../content/Fr.jsx";
+import en from "../content/En.jsx";
 
 const Contact = () => {
   const [email, setEmail] = useState('');
@@ -9,6 +13,10 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
+  const router = useRouter();
+  const { locale } = router;
+  const language = locale === "fr" ? fr : en;
 
   let handleOnEmailChange = (e) => {
     let inputValue = e.target.value;
@@ -32,13 +40,13 @@ const Contact = () => {
 
   let handleOnSubmit = async (e) => {
     e.preventDefault();
-    console.log('Sending');
     setSubmitted(true);
 
     let userdata= {
       Name: name,
       Email: email,
       Message: message,
+      Subject: subject
       }
 
     const res = await fetch('/api/mail', {
@@ -48,13 +56,7 @@ const Contact = () => {
         },
         body: JSON.stringify(userdata)
       })
-
-    if(results.status == 200) {
-      console.log("!!!!!!");
-    } else {
-      console.log("gnnnbdf");
     }
-  }
 
   return (
     <motion.div>
@@ -65,17 +67,18 @@ const Contact = () => {
         <link rel="canonical" href="https://florianhoudu.fr/contact" />
       </Head>
       <header>
-        {/* <Navigation /> */}
+      <Navigation />
       </header>
       <section id="contact">
         <form method="POST" onSubmit={handleOnSubmit}>
-          <input type="text" name="subject" value={subject} onChange={handleOnSubjectChange}/>
-          <input type="text" name="name" value={name} onChange={handleOnNameChange} />
-          <input type="email" name="email" value={email} onChange={handleOnEmailChange} />
-          <input type="text" name="message" value={message} onChange={handleOnMessageChange} />
-          <button type="submit">Envoyer</button>
+          <input type="text" name="subject" value={subject} onChange={handleOnSubjectChange} required/>
+          <input type="text" name="name" value={name} onChange={handleOnNameChange} required/>
+          <input type="email" name="email" value={email} onChange={handleOnEmailChange} required/>
+          <input type="text" name="message" value={message} onChange={handleOnMessageChange} required/>
+          <button type="submit">{language.contact[0]}</button>
         </form>
       </section>
+      <Footer />
     </motion.div>
   );
 };

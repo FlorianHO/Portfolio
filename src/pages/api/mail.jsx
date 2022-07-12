@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 export default async (req, res) => {
-  const { Name, Email, Message } = req.body;
+  const { Name, Email, Message, Subject } = req.body;
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -13,18 +13,18 @@ export default async (req, res) => {
   });
 
 const data= { from: Email,
-    to: "florian.houdu17@gmail.com",
-    subject: `Contact form submission from ${Name}`,
-      html: `<h1>${Name} Have contacted you</h1>
-      <p>You have a contact form submission</p><br>
-        <p><strong>Email: </strong> ${Email}</p><br>
-        <p><strong>Message: </strong> ${Message}</p><br>
-      `}
-
-      transporter.sendMail(data, function (err, info) {
+    to: process.env.NEXT_PUBLIC_SMTP_USER,
+    subject: `${Subject} - de ${Name}`,
+    html: `<h1>${Name} vous a contacté</h1>
+      <p>Vous avez un message de soumission!</p><br>
+      <p><strong>Email: </strong> ${Email}</p><br>
+      <p><strong>Message: </strong> ${Message}</p><br>
+    `};
+    
+      transporter.sendMail(data, function(err, info) {
         if(err)
-          console.log(err)
+          console.log(err);
         else
-          console.log(info)
+          console.log(info);
       })
 };
