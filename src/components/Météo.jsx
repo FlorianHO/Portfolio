@@ -26,7 +26,6 @@ const Meteo = () => {
     fetchData();
   }, []);
   if (isFetched) {
-    console.log(data);
     return (
       <>
         <section id="meteo">

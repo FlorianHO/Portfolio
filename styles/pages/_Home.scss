@@ -392,6 +392,18 @@
           right: -10px;
           transform: rotate(180deg);
         }
+        .container-text {
+          padding: 0.7rem 0.8rem;
+          font-size: calc(0.3vmin + 0.9rem);
+          a:hover {
+            transition: all 0.2s ease-out;
+            color: hsl(42, 45%, 59%);
+          }
+        }
+        &:hover {
+          transform: scale(1.02);
+          transition: 0.3s ease-out;
+        }
       }
       .form-2-text {
         background: hsl(0, 0%, 98%);
@@ -408,6 +420,18 @@
           border-right: 15px solid hsl(0, 0%, 98%);
           top: 5px;
           left: -10px;
+        }
+        .container-text {
+          padding: 0.7rem 0.8rem;
+          font-size: calc(0.3vmin + 0.9rem);
+          a:hover {
+            transition: all 0.2s ease-out;
+            color: hsl(42, 45%, 59%);
+          }
+        }
+        &:hover {
+          transform: scale(1.02);
+          transition: 0.3s ease-out;
         }
       }
       .form-3-text {
@@ -426,6 +450,18 @@
           top: 5px;
           right: -10px;
           transform: rotate(180deg);
+        }
+        .container-text {
+          padding: 0.7rem 0.8rem;
+          font-size: calc(0.3vmin + 0.9rem);
+          a:hover {
+            transition: all 0.2s ease-out;
+            color: hsl(42, 45%, 59%);
+          }
+        }
+        &:hover {
+          transform: scale(1.02);
+          transition: 0.3s ease-out;
         }
       }
     }

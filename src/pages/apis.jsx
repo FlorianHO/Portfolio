@@ -19,7 +19,7 @@ const Api = () => {
       </Head>
       <header className="api-header">
         <Navigation />
-        <h1>Météo actuelle</h1>
+        <h1>Api</h1>
       </header>
       <main className="api-content">
         <Meteo />

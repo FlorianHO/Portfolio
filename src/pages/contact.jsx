@@ -8,6 +8,7 @@ const Contact = () => {
   const [subject, setSubject] = useState('');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   let handleOnEmailChange = (e) => {
     let inputValue = e.target.value;
@@ -31,10 +32,23 @@ const Contact = () => {
 
   let handleOnSubmit = async (e) => {
     e.preventDefault();
-    const results = await fetch('/api/email', {
-      method: "post",
-      body: JSON.stringify({email: email, name: name, subject: subject, message: message})
-    });
+    console.log('Sending');
+    setSubmitted(true);
+
+    let userdata= {
+      Name: name,
+      Email: email,
+      Message: message,
+      }
+
+    const res = await fetch('/api/mail', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userdata)
+      })
+
     if(results.status == 200) {
       console.log("!!!!!!");
     } else {
@@ -54,7 +68,7 @@ const Contact = () => {
         {/* <Navigation /> */}
       </header>
       <section id="contact">
-        <form method="post" onSubmit={handleOnSubmit}>
+        <form method="POST" onSubmit={handleOnSubmit}>
           <input type="text" name="subject" value={subject} onChange={handleOnSubjectChange}/>
           <input type="text" name="name" value={name} onChange={handleOnNameChange} />
           <input type="email" name="email" value={email} onChange={handleOnEmailChange} />
