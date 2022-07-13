@@ -40,6 +40,10 @@ const Contact = () => {
 
   let handleOnSubmit = async (e: any) => {
     e.preventDefault();
+    Array.from((document.querySelectorAll(".input") as any)).forEach((val : any) => {
+      val.value = " ";
+    });
+    
     setSubmitted(true);
 
     let userdata= {
@@ -71,10 +75,10 @@ const Contact = () => {
       </header>
       <section id="contact">
         <form method="POST" onSubmit={handleOnSubmit}>
-          <input type="text" name="subject" value={subject} onChange={handleOnSubjectChange} required/>
-          <input type="text" name="name" value={name} onChange={handleOnNameChange} required/>
-          <input type="email" name="email" value={email} onChange={handleOnEmailChange} required/>
-          <input type="text" name="message" value={message} onChange={handleOnMessageChange} required/>
+          <input type="text" name="subject" className="input" value={subject} onChange={handleOnSubjectChange} required/>
+          <input type="text" name="name" className="input" value={name} onChange={handleOnNameChange} required/>
+          <input type="email" name="email" className="input" value={email} onChange={handleOnEmailChange} required/>
+          <input type="text" name="message" className="input" value={message} onChange={handleOnMessageChange} required/>
           <button type="submit">{language.contact[0]}</button>
         </form>
       </section>
