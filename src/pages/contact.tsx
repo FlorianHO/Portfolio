@@ -8,11 +8,11 @@ import fr from "../content/Fr.jsx";
 import en from "../content/En.jsx";
 
 const Contact = () => {
-  const [email, setEmail] = useState<any>('');
-  const [subject, setSubject] = useState<any>('');
-  const [name, setName] = useState<any>('');
-  const [message, setMessage] = useState<any>('');
-  const [submitted, setSubmitted] = useState<any>(false);
+  const [email, setEmail] = useState<string>('');
+  const [subject, setSubject] = useState<string>('');
+  const [name, setName] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [submitted, setSubmitted] = useState<boolean>(false);
 
   const router = useRouter();
   const { locale } = router;

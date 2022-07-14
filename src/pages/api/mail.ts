@@ -1,4 +1,4 @@
-const nodemailer = require("nodemailer");
+const nodemailer : any = require("nodemailer");
 
 export default async (req: any, res: any) => {
   const { Name, Email, Message, Subject } = req.body;

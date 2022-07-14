@@ -226,7 +226,7 @@
         gap: 4px;
         box-shadow: 0 25px 35px 10px hsla(0, 5%, 13%, 0.1);
         animation: skill-move 3.5s infinite linear;
-        @for $i from 1 through 9 {
+        @for $i from 1 through 10 {
           &:nth-child(#{$i}) {
             animation-delay: 4s+ ($i + 1.8s);
           }

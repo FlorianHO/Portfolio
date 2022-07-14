@@ -236,6 +236,15 @@ export default function Home() {
               </div>
               <div className="skill">
                 <Image
+                  src="/assets/images/nextjs.svg"
+                  alt="Logo de la bibliothèque React"
+                  width={40}
+                  height={40}
+                />
+                <span>Next.js</span>
+              </div>
+              <div className="skill">
+                <Image
                   src="/assets/images/sass.svg"
                   alt="Logo du langage de script préprocesseur SASS"
                   width={40}
@@ -291,6 +300,9 @@ export default function Home() {
                     <div className="container-technos">
                       <div className="techno">
                         <span>React JS</span>
+                      </div>
+                      <div className="techno">
+                        <span>Next.Js</span>
                       </div>
                       <div className="techno">
                         <span>SCSS</span>
