@@ -8,7 +8,11 @@ import Batman from "../components/Three.js/modelDraco"
 
 const Terre = () => {
   return (
-    <motion.div>
+    <motion.div 
+    initial={{ y: -1000 }}
+    animate={{ y: 0 }}
+    exit={{ y: -1000 }}
+    transition={{ duration: 0.3 }}>
       <Head>
         <meta name="description" content="Yes" />
         <title>Terre · Houdu Florian 😎</title>

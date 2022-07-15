@@ -6,6 +6,7 @@
   background-color: hsl(0, 3%, 7%);
   pointer-events: none;
   user-select: none;
+  z-index: 1000;
   @extend %flex-center;
   flex-direction: column;
   h1 {

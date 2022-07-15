@@ -2,17 +2,38 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import { LayoutGroup } from "framer-motion"
 import AOS from "aos";
-import Loader from "../components/Loader.jsx";
-import Cursor from "../components/Cursor.jsx";
+import Loader from "../components/Loader";
+import Cursor from "../components/Cursor";
 import "../../styles/index.scss";
 
 const MyApp = ({ Component, pageProps } : any) => {
-  const [loading, setLoading] = useState(true);
-
+  const [loading, setLoading] = useState<boolean>(true);
+  
   useEffect(() => {
     setLoading(false);
     (document.getElementById("__next") as HTMLInputElement).classList.add("fade-in");
     AOS.init();
+
+    let DocumentNameChange = () => {
+      let PageName = document.title;
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+         document.title = PageName;
+        } else {
+         document.title = "Come back 😥";
+       }
+      });
+    }
+
+    let currentUrl = location.href;
+    setInterval(() => {
+      if (location.href !== currentUrl) {
+        currentUrl = location.href;
+        DocumentNameChange();
+      }
+    }, 100);
+
+
   }, []);
   
   return (

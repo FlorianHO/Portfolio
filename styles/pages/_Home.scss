@@ -260,6 +260,10 @@
         h5 {
           color: $background-dark;
         }
+        .exp-1 p {
+          position: absolute;
+          right: 50px;
+        }
         .exp-1-text {
           background: hsl(0, 0%, 98%);
           width: 350px;
@@ -470,13 +474,14 @@
 
 .container-technos {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
   .techno {
     background: $light-color-text;
     border-radius: 2rem;
     min-width: 45px;
     height: 15px;
-    margin-left: 0.8rem;
     @extend %flex-center;
     span {
       color: $background-dark;

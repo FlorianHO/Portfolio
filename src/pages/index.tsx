@@ -287,6 +287,7 @@ export default function Home() {
               <div className="experience-timeline">
                 <div className="exp-1">
                   <div className="dot"></div>
+                  <p>04.2022 - 08.2022</p>
                   <div className="exp-1-text" data-aos="fade-left"
                                               data-aos-easing="linear" data-aos-duration="600">
                     <div className="container-text">
@@ -333,6 +334,7 @@ export default function Home() {
                 </div>
                 <div className="exp-2">
                   <div className="dot"></div>
+                  <p>08.2019 - 08.2019</p>
                     <div className="exp-2-text" data-aos="fade-right"
                                               data-aos-easing="linear" data-aos-duration="700">
                       <div className="container-text">
@@ -354,6 +356,7 @@ export default function Home() {
                 </div>
                 <div className="exp-3">
                   <div className="dot"></div>
+                  <p>12.2017</p>
                   <div className="exp-3-text" data-aos="fade-left"
                    data-aos-easing="linear" data-aos-duration="600">
                       <div className="container-text">
