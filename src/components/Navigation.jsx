@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
-import fr from "../content/Fr.jsx";
-import en from "../content/En.jsx";
+import fr from "../content/Fr.ts";
+import en from "../content/En.ts";
 
 const Navigation = () => {
   const router = useRouter();

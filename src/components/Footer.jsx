@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import fr from "../content/Fr.jsx";
-import en from "../content/En.jsx";
+import fr from "../content/Fr.ts";
+import en from "../content/En.ts";
 
 const Footer = () => {
   const router = useRouter();

@@ -7,8 +7,8 @@ import gsap from "gsap";
 import Typed from "typed.js";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import fr from "../content/Fr.jsx";
-import en from "../content/En.jsx";
+import fr from "../content/Fr";
+import en from "../content/En";
 import "aos/dist/aos.css";
 
 export default function Home() {

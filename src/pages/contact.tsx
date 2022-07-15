@@ -4,8 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import fr from "../content/Fr.jsx";
-import en from "../content/En.jsx";
+import fr from "../content/Fr";
+import en from "../content/En";
 
 const Contact = () => {
   const [email, setEmail] = useState<string>('');
