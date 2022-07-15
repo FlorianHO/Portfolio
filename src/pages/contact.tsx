@@ -75,10 +75,10 @@ const Contact = () => {
       </header>
       <section id="contact">
         <form method="POST" onSubmit={handleOnSubmit}>
-          <input type="text" name="subject" className="input" value={subject} onChange={handleOnSubjectChange} required/>
-          <input type="text" name="name" className="input" value={name} onChange={handleOnNameChange} required/>
-          <input type="email" name="email" className="input" value={email} onChange={handleOnEmailChange} required/>
-          <input type="text" name="message" className="input" value={message} onChange={handleOnMessageChange} required/>
+          <input type="text" name="subject" className="input" value={subject} onChange={handleOnSubjectChange} placeholder="Sujet" required/>
+          <input type="text" name="name" className="input" value={name} onChange={handleOnNameChange} placeholder="Votre nom" required/>
+          <input type="email" name="email" className="input" value={email} onChange={handleOnEmailChange} placeholder="Votre email" required/>
+          <textarea name="message" className="input" value={message} onChange={handleOnMessageChange} placeholder="Votre message" required rows={12}></textarea>
           <button type="submit">{language.contact[0]}</button>
         </form>
       </section>
