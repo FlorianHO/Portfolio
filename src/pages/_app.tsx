@@ -31,7 +31,7 @@ const MyApp = ({ Component, pageProps } : any) => {
         currentUrl = location.href;
         DocumentNameChange();
       }
-    }, 100);
+    }, 250);
 
 
   }, []);
